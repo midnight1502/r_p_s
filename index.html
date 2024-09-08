@@ -7,7 +7,45 @@
 <style>
 </style>
 <script>
-  
+    let a = prompt("Enter your choice to start: (rock, paper or scissors)");
+    let b = Math.random();
+    a = a.toLowerCase();
+    
+  function getMachineChoice() {
+    if (b >= 0 && b <= 0.33) {
+        return 'Rock';
+    } else if (b >= 0.34 && b <= 0.66) {
+        return 'Paper'; 
+    } else {
+        return 'Scissors';
+    }
+  }
+
+  function getHumanChoice() {
+        if (a == 'rock') {
+            return 'Rock';
+        } else if (a == 'paper') {
+            return 'Paper';
+        } else if (a == 'scissors') {
+            return 'Scissors';
+        } else {
+            return 'Wrong value, refresh the page and try again';
+        }
+    }
+
+    const humanChoice = getHumanChoice();
+    const machineChoice = getMachineChoice();
+
+   function playRound () {
+        if ((humanChoice == 'Rock' && machineChoice == 'Scissors') || (humanChoice == 'Paper' && machineChoice == 'Rock') || (humanChoice == 'Scissors' && machineChoice == 'Paper')) {
+            return 'Human won!';
+        } else if ((humanChoice == 'Scissors' && machineChoice == 'Rock') || (humanChoice == 'Rock' && machineChoice == 'Paper') || (humanChoice == 'Paper' && machineChoice == 'Scissors')) {
+            return 'Computer won!';
+        } else {
+            return 'No winner';
+        }
+   } 
+
 </script>
 <body>
   
