@@ -18,9 +18,9 @@ function playGame () {
     a = prompt("Enter your choice to start: (rock, paper or scissors)");
     a = a.toLowerCase();
     while (a != 'rock' && a != 'paper' && a != 'scissors') {
-    a = a.toLowerCase();
     console.log('Wrong value, refresh the page and try again');
     a = prompt("Enter your choice to start: (rock, paper or scissors)");
+    a = a.toLowerCase();
     }
     b = Math.random();
     
@@ -41,14 +41,12 @@ function playGame () {
             return 'Paper';
         } else if (a == 'scissors') {
             return 'Scissors';
-        } else {
-            return 'Wrong value, refresh the page and try again';
         }
     }
 
     const humanChoice = getHumanChoice();
     const machineChoice = getMachineChoice();
-        console.log("Your: " + humanChoice + " vs PC's:" + machineChoice);
+        console.log("Your: " + humanChoice + " vs PC's: " + machineChoice);
    function playRound () {
         if ((humanChoice == 'Rock' && machineChoice == 'Scissors') || (humanChoice == 'Paper' && machineChoice == 'Rock') || (humanChoice == 'Scissors' && machineChoice == 'Paper')) {
             score1++;
