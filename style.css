@@ -1,0 +1,22 @@
+#control_btn {
+    text-align: center;
+    margin: auto;
+    padding: 25px;
+}
+
+button {
+    padding: 10px 35px;
+    margin: 5px 10px;
+}
+
+button:hover {
+    background-color: greenyellow;
+    font-weight: 700;
+}
+
+#game_log {
+    text-align: center;
+    height: 520px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
